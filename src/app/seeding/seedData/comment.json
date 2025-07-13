@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "text": "Great progress on this task! The initial design looks promising.",
+    "taskId": 1,
+    "userId": 1
+  },
+  {
+    "id": 2,
+    "text": "I've reviewed the navigation algorithm. We should consider edge cases for mobile devices.",
+    "taskId": 2,
+    "userId": 3
+  },
+  {
+    "id": 3,
+    "text": "The energy solutions approach is innovative. Let's schedule a meeting to discuss implementation details.",
+    "taskId": 3,
+    "userId": 5
+  },
+  {
+    "id": 4,
+    "text": "Software workflow looks good. We need to add error handling for the third-party integrations.",
+    "taskId": 4,
+    "userId": 7
+  },
+  {
+    "id": 5,
+    "text": "AI predictions are showing 85% accuracy. We should fine-tune the model parameters.",
+    "taskId": 5,
+    "userId": 9
+  },
+  {
+    "id": 6,
+    "text": "Biotech test results are promising. Ready to move to the next phase.",
+    "taskId": 6,
+    "userId": 11
+  },
+  {
+    "id": 7,
+    "text": "Golf AI integration is complete. Testing phase begins next week.",
+    "taskId": 7,
+    "userId": 13
+  },
+  {
+    "id": 8,
+    "text": "Hotel database migration successful. All data integrity checks passed.",
+    "taskId": 8,
+    "userId": 15
+  },
+  {
+    "id": 9,
+    "text": "Telecom upgrade is on schedule. Network performance has improved by 40%.",
+    "taskId": 9,
+    "userId": 17
+  },
+  {
+    "id": 10,
+    "text": "Security protocol implementation complete. All penetration tests passed.",
+    "taskId": 10,
+    "userId": 19
+  }
+]
