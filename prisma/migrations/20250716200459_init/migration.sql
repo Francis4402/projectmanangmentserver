@@ -1,10 +1,16 @@
+-- CreateEnum
+CREATE TYPE "Role" AS ENUM ('User', 'Admin');
+
 -- CreateTable
 CREATE TABLE "User" (
     "userId" SERIAL NOT NULL,
-    "cognitoId" TEXT NOT NULL,
     "username" TEXT NOT NULL,
+    "email" TEXT NOT NULL,
     "profilePictureUrl" TEXT,
+    "password" TEXT,
     "teamId" INTEGER,
+    "cognitoId" TEXT,
+    "role" "Role" DEFAULT 'User',
 
     CONSTRAINT "User_pkey" PRIMARY KEY ("userId")
 );
@@ -88,10 +94,13 @@ CREATE TABLE "Comment" (
 );
 
 -- CreateIndex
-CREATE UNIQUE INDEX "User_cognitoId_key" ON "User"("cognitoId");
+CREATE UNIQUE INDEX "User_username_key" ON "User"("username");
 
 -- CreateIndex
-CREATE UNIQUE INDEX "User_username_key" ON "User"("username");
+CREATE UNIQUE INDEX "User_email_key" ON "User"("email");
+
+-- CreateIndex
+CREATE UNIQUE INDEX "User_cognitoId_key" ON "User"("cognitoId");
 
 -- AddForeignKey
 ALTER TABLE "User" ADD CONSTRAINT "User_teamId_fkey" FOREIGN KEY ("teamId") REFERENCES "Team"("id") ON DELETE SET NULL ON UPDATE CASCADE;

@@ -13,13 +13,20 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+enum Role {
+  User
+  Admin
+}
 
 model User {
   userId            Int     @id @default(autoincrement())
-  cognitoId         String  @unique
   username          String  @unique
+  email             String  @unique
   profilePictureUrl String?
+  password          String?
   teamId            Int?
+  cognitoId         String?     @unique
+  role              Role?   @default(User)
 
   authoredTasks   Task[]           @relation("TaskAuthor")
   assignedTasks   Task[]           @relation("TaskAssignee")
