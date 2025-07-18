@@ -67,9 +67,9 @@ model Task {
   id             Int       @id @default(autoincrement())
   title          String
   description    String?
-  status         String?
-  priority       String?
-  tags           String?
+  status         String
+  priority       String
+  tags           String[]
   startDate      DateTime?
   dueDate        DateTime?
   points         Int?

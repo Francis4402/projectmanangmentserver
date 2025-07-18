@@ -7,7 +7,7 @@ import { UserRole } from "../types/usertype";
 
 const router = Router();
 
-router.get("/allusers", auth(UserRole.ADMIN), getUsers);
+router.get("/allusers", auth(UserRole.ADMIN, UserRole.USER), getUsers);
 router.post("/register", register);
 router.post("/login", login);
 router.get("/:email", auth(UserRole.ADMIN, UserRole.USER), getUser);
